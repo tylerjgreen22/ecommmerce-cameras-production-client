@@ -330,6 +330,10 @@ body {
 @media (max-width: 425px) {
   .grid {
     grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
   }
 }
 
