@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const url = "http://localhost:3001/api/v1";
-export const imgUrl = "http://localhost:3001/assets"
+const url = "https://ecommerce-server-8xhc.onrender.com/api/v1";
+export const imgUrl = "https://ecommerce-server-8xhc.onrender.com/assets"
 
 export async function getProducts() {
     try {
