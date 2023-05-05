@@ -1,0 +1,466 @@
+:root {
+  --main-clr: #32594a;
+  --accent-clr: #fff5e1;
+  --footer-clr: #808080;
+  --white-clr: #f5f5f5;
+  --black-clr: #000000;
+
+  --fs-small-text: 1rem;
+  --fs-text: 1.25rem;
+  --fs-subtitle: 1.5rem;
+  --fs-title: 2rem;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* General Styling */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white-clr);
+}
+
+/* Containers */
+
+.content-container {
+  --width: 1100px;
+  --padding: 1rem;
+
+  width: min(var(--width), (100% - (var(--padding) * 2)));
+  min-height: calc(100vh - 271px);
+  margin-inline: auto;
+  padding: 5em 0;
+}
+
+.content-container[data-type="header-footer"] {
+  min-height: 0;
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-container[data-type="header-footer"] {
+    min-height: 0;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Utility Classes */
+
+.main-background-color {
+  background-color: var(--main-clr);
+}
+
+.accent-color {
+  color: var(--accent-clr);
+}
+
+.footer-color {
+  background-color: var(--footer-clr);
+}
+
+.white {
+  color: var(--white-clr);
+}
+
+.black {
+  color: var(--black-clr);
+}
+
+.title {
+  font-size: var(--fs-title);
+  font-weight: bold;
+}
+
+.title-reg {
+  font-size: var(--fs-title);
+}
+
+.subtitle {
+  font-size: var(--fs-subtitle);
+}
+
+.subtitle-bold {
+  font-size: var(--fs-subtitle);
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: var(--fs-small-text);
+  line-height: 20px;
+}
+
+.text {
+  font-size: var(--fs-text);
+}
+
+.text-bold {
+  font-size: var(--fs-text);
+  font-weight: bold;
+}
+
+.text-indent {
+  font-size: var(--fs-text);
+  line-height: 24px;
+  text-indent: 50px;
+}
+
+.link {
+  color: var(--link-clr);
+  font-size: var(--fs-text);
+}
+
+.link:hover {
+  opacity: 50%;
+}
+
+.hf-link {
+  text-decoration: none;
+}
+
+.hf-link:hover {
+  color: inherit;
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+.hf-link-active {
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.hf-link-active:hover {
+  color: inherit;
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+.button {
+  max-width: 200px;
+  border-radius: 5px;
+  color: var(--accent-clr);
+  background-color: var(--main-clr);
+  padding: 0.5em;
+}
+
+.button:hover {
+  opacity: 50%;
+}
+
+.small-bottom-spacer {
+  margin-bottom: 1em;
+}
+
+.bottom-spacer {
+  margin-bottom: 2em;
+}
+
+.large-bottom-spacer {
+  margin-bottom: 3em;
+}
+
+.small-right-spacer {
+  margin-right: 1em;
+}
+
+@media (max-width: 425px) {
+  .small-bottom-spacer {
+    margin-bottom: 0.5em;
+  }
+
+  .bottom-spacer {
+    margin-bottom: 1em;
+  }
+
+  .small-right-spacer {
+    margin-right: 0.5em;
+  }
+}
+
+.center {
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 425px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 24px;
+}
+
+.flex-small {
+  display: flex;
+  gap: 12px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flex-column-small {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  .flex {
+    flex-direction: column;
+  }
+  .flex-space-between {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-space-between {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.shadow {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+.image {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.image-large {
+  width: 600px;
+  border-radius: 10px;
+}
+
+.image-large-no-border {
+  width: 600px;
+}
+
+@media (max-width: 375px) {
+  .image {
+    width: 275px;
+    border-radius: 10px;
+  }
+
+  .image-large {
+    width: 275px;
+    border-radius: 10px;
+  }
+
+  .image-large-no-border {
+    width: 275px;
+  }
+
+  .shadow {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    height: 165px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 376px) {
+  .image {
+    width: 400px;
+    border-radius: 10px;
+  }
+
+  .image-large {
+    width: 400px;
+    border-radius: 10px;
+  }
+
+  .image-large-no-border {
+    width: 400px;
+  }
+
+  .shadow {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    height: 265px;
+  }
+}
+
+.form {
+  max-width: 400px;
+}
+
+.textbox {
+  height: 200px;
+}
+
+.checkbox {
+  align-self: baseline;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
